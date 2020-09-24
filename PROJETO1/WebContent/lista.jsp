@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +11,7 @@
 </head>
 <body>
 <%@ page import="java.util.*,br.edu.insper.mvc.model.*"%>
+<%@ page import="java.util.*,br.edu.insper.mvc.controller.*"%>
 
 <form action="lista" method = 'Post'>
 
@@ -21,19 +25,7 @@
 	<input type = 'submit' value = 'Submit'>
 </form>
 
-<table border = '1'>
-<% DAO dao = new DAO();
-	List<Tasks> tasks = dao.getLista();
-	for (Tasks task : tasks) { %>
-	<tr>
-		<td><%=task.getId()%></td>
-		<td><%=task.getData().getTime()%></td>
-		<td><%=task.getUsuario()%></td>
-		<td><%=task.getTarefa()%></td>
-		<td><%=task.getTag()%></td>
-	</tr>
-<% } %>
 		
-</table>
+
 </body>
 </html>

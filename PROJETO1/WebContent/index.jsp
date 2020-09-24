@@ -24,8 +24,11 @@ Remova uma tarefa
 </p>
 <jsp:include page="remove.jsp"></jsp:include> <br>
 <p align="center">
-LISTA
+Veja a sua lista
 </p>
-<jsp:include page="lista.jsp"></jsp:include> <br>
+Escolha o seu filtro
+<jsp:include page="lista.jsp"></jsp:include><br>
+<jsp:include page="listaa.jsp"></jsp:include> 
+
 </body>
 </html>

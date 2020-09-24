@@ -36,17 +36,17 @@ protected void service (HttpServletRequest request,
 			
 			task.setTag(request.getParameter("tag"));
 			
-			if (request.getParameter("tag") != "todos" ) {
+			if (request.getParameter("tag")!= null && !request.getParameter("tag").equals("Todos")) {
 				List<Tasks> tasks = dao.getListaMod(task);
 				request.setAttribute("tasks",tasks);
-				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("filtro.jsp");
 				dispatcher.forward(request, response);
 					
 			} else {
 			
 			List<Tasks> tasks = dao.getLista();
 			request.setAttribute("tasks",tasks);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("lista.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("filtro.jsp");
 			dispatcher.forward(request, response);
 				
 			} 
