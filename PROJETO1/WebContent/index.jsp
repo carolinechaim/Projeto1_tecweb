@@ -11,15 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p align="center">
+<p>
 Adicione uma tarefa
 </p>
-<p align = "center"> <jsp:include page="adiciona.jsp"></jsp:include> </p> <br>
-<p align="center">
+<p> <jsp:include page="adiciona.jsp"></jsp:include> </p> <br>
+<p>
 Edite uma tarefa
 </p>
 <jsp:include page="edita.jsp"></jsp:include> <br>
-<p align="center">
+<p>
 Remova uma tarefa
 </p>
 <jsp:include page="remove.jsp"></jsp:include> <br>

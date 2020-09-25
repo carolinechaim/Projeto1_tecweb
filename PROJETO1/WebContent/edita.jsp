@@ -12,8 +12,6 @@
 
 <form action="edita" method='post'>
 ID: <input type='number' name='id'>
-	Data=<input type="text" name="data"/>
-	Nome=<input type="text" name="usuario"/>
 	Tag=<select type ="text" name="tag">
   <option value="Insper">Insper</option>
   <option value="Lazer">Lazer</option>

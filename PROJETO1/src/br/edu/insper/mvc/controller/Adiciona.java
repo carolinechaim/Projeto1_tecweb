@@ -2,9 +2,7 @@ package br.edu.insper.mvc.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -37,18 +35,12 @@ public class Adiciona extends HttpServlet {
 		DAO dao;
 		try {
 			dao = new DAO();
-		
+			
 		
 		Tasks task = new Tasks();
 		
-		String nascimento = request.getParameter("data");
-		java.util.Date data =new SimpleDateFormat("yyyy-MM-dd").parse(nascimento);
-		Calendar dataNascimento =Calendar.getInstance();
-		dataNascimento.setTime(data);
 		
-		task.setData(dataNascimento);
-		
-		task.setUsuario(request.getParameter("usuario"));
+		task.setUsuario(dao.getUser());
 		task.setTag(request.getParameter("tag"));
 		task.setTarefa(request.getParameter("tarefa"));
 		
@@ -67,9 +59,6 @@ public class Adiciona extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
